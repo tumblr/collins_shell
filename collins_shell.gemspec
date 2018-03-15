@@ -51,7 +51,7 @@ Gem::Specification.new do |s|
     'lib/collins_shell/util/log_printer.rb',
     'lib/collins_shell/util/printer_util.rb'
   ]
-  s.homepage = 'https://github.com/tumblr/collins/tree/master/support/ruby/collins-shell'
+  s.homepage = 'https://github.com/tumblr/collins_shell'
   s.licenses = ['APL 2.0']
   s.require_paths = ['lib']
   s.summary = 'Shell for Collins API'
