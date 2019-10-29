@@ -137,6 +137,11 @@ module CollinsShell
       tags.map do |tag|
         if tag.to_s =~ /^ipmi_(.*)/ then
           asset.ipmi.send($1.to_sym)
+        elsif tag.to_s =~ /^addresses_(.*)/ then
+          result = asset.addresses.select do |a|
+            a.pool.upcase == $1.upcase
+          end
+          format_asset_value result
         elsif tag.to_s.split('.').length == 2 then
           o, m = tag.to_s.split('.')
           result = asset.send(o.to_sym)
