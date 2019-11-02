@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version = File.read 'VERSION'
 
   s.required_rubygems_version = Gem::Requirement.new('>= 0') if s.respond_to? :required_rubygems_version=
-  s.authors = ['Blake Matheny', 'Gabe Conradi', 'Will Richard']
+  s.authors = ['Blake Matheny', 'Gabe Conradi', 'Will Richard', 'Stephen Gelman']
   s.date = '2016-02-03'
   s.description = 'Provides basic CLI for interacting with Collins API'
   s.email = ['collins-sm@googlegroups.com']
