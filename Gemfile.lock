@@ -80,7 +80,7 @@ GEM
       method_source (~> 0.7.1)
       slop (>= 2.4.4, < 3)
     psych (3.0.2)
-    rack (2.0.4)
+    rack (2.0.8)
     rake (12.3.0)
     rdoc (6.0.1)
     redcarpet (3.4.0)
@@ -113,7 +113,7 @@ DEPENDENCIES
   jeweler
   rake
   redcarpet
-  rspec (~> 2.10.0)
+  rspec
   yard (~> 0.9)
 
 BUNDLED WITH
