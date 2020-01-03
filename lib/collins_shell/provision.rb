@@ -51,13 +51,13 @@ module CollinsShell
     D
     use_collins_options
     method_option :activate, :type => :boolean, :desc => 'Activate a server', :hide => true
-    method_option :confirm, :type => :boolean, :default => :true, :desc => 'Require confirmation. Defaults to true'
+    method_option :confirm, :type => :boolean, :default => true, :desc => 'Require confirmation. Defaults to true'
     method_option :exec, :type => :string, :desc => 'Execute a command using the data from this asset. Use {{hostname}}, {{ipmi.password}}, etc for substitution'
     method_option :pool, :type => :string, :desc => 'Pool for host'
     method_option :primary_role, :type => :string, :desc => 'Primary role for host'
     method_option :secondary_role, :type => :string, :desc => 'Secondary role for host'
     method_option :suffix, :type => :string, :desc => 'Suffix to use for hostname'
-    method_option :verify, :type => :boolean, :default => :true, :desc => 'Verify arguments locally first'
+    method_option :verify, :type => :boolean, :default => true, :desc => 'Verify arguments locally first'
     def host tag, profile, contact
       verify_profile(profile) if options.verify
       config = get_collins_config

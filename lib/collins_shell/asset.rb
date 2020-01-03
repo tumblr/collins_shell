@@ -37,7 +37,7 @@ module CollinsShell
     use_tag_option(true)
     use_nuke_option(true)
     method_option :reason, :required => true, :type => :string, :desc => 'Reason to delete asset'
-    method_option :nuke, :required => false, :type => :boolean, :default => :false, :desc => 'Destroy asset forever?'
+    method_option :nuke, :required => false, :type => :boolean, :default => false, :desc => 'Destroy asset forever?'
     def delete
       call_collins get_collins_client, "delete asset" do |client|
         if client.delete!(options.tag, :reason => options.reason, :nuke => options.nuke) then
@@ -51,7 +51,7 @@ module CollinsShell
     desc 'find', 'find assets using the specified selector'
     use_collins_options
     use_selector_option(true)
-    method_option :confirm, :type => :boolean, :default => :true, :desc => 'Require exec confirmation. Defaults to true'
+    method_option :confirm, :type => :boolean, :default => true, :desc => 'Require exec confirmation. Defaults to true'
     method_option :details, :type => :boolean, :desc => 'Output assets how you see them in get'
     method_option :exec, :type => :string, :desc => 'Execute a command using the data from this asset. Use {{hostname}}, {{ipmi.password}}, etc for substitution'
     method_option :header, :type => :boolean, :default => true, :desc => 'Display a tag header. Defaults to true'
@@ -111,7 +111,7 @@ module CollinsShell
 
     desc 'get TAG', 'get an asset and display its attributes'
     use_collins_options
-    method_option :confirm, :type => :boolean, :default => :true, :desc => 'Require exec confirmation. Defaults to true'
+    method_option :confirm, :type => :boolean, :default => true, :desc => 'Require exec confirmation. Defaults to true'
     method_option :exec, :type => :string, :desc => 'Execute a command using the data from this asset. Use {{hostname}}, {{ipmi.password}}, etc for substitution'
     method_option :logs, :type => :boolean, :default => false, :desc => 'Also display asset logs'
     method_option :remote, :type => :string, :desc => 'Remote location to search. This is a tag in collins corresponding to the datacenter asset'
