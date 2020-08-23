@@ -52,7 +52,7 @@ Gem::Specification.new do |s|
     'lib/collins_shell/util/printer_util.rb'
   ]
   s.homepage = 'https://github.com/tumblr/collins_shell'
-  s.licenses = ["Apache-2.0"]
+  s.licenses = ['Apache-2.0']
   s.require_paths = ['lib']
   s.summary = 'Shell for Collins API'
 
