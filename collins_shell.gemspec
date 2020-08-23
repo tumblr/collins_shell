@@ -52,21 +52,21 @@ Gem::Specification.new do |s|
     'lib/collins_shell/util/printer_util.rb'
   ]
   s.homepage = 'https://github.com/tumblr/collins_shell'
-  s.licenses = ['APL 2.0']
+  s.licenses = ['Apache-2.0']
   s.require_paths = ['lib']
   s.summary = 'Shell for Collins API'
 
   s.add_runtime_dependency('collins_client', '~> 0.3.2')
-  s.add_runtime_dependency('highline','~> 1.6.15')
-  s.add_runtime_dependency('mustache','~> 0.99.4')
-  s.add_runtime_dependency('pry','~> 0.9.9.6')
-  s.add_runtime_dependency('terminal-table','~> 1.4.5')
-  s.add_runtime_dependency('thor','~> 0.19.0')
+  s.add_runtime_dependency('highline', '~> 1.6.21')
+  s.add_runtime_dependency('mustache', '~> 0.99.4')
+  s.add_runtime_dependency('pry', '~> 0.9.9.6')
+  s.add_runtime_dependency('terminal-table', '~> 1.4.5')
+  s.add_runtime_dependency('thor', '~> 0.19.0')
 
-  s.add_development_dependency('rspec')
-  s.add_development_dependency('redcarpet')
-  s.add_development_dependency('yard','~> 0.9')
-  s.add_development_dependency('capistrano','~> 2.15.5')
-  s.add_development_dependency('rake')
-  s.add_development_dependency('jeweler')
+  s.add_development_dependency('rspec', '~> 2.99')
+  s.add_development_dependency('redcarpet', '~> 3.5')
+  s.add_development_dependency('yard', '~> 0.9')
+  s.add_development_dependency('capistrano', '~> 2.15.5')
+  s.add_development_dependency('rake', '~> 12.3.0')
+  s.add_development_dependency('jeweler', '~> 2.1.2')
 end
